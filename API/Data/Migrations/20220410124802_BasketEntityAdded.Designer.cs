@@ -2,13 +2,16 @@
 using API.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+
 namespace API.Data.Migrations
 {
     [DbContext(typeof(StoreContext))]
-    partial class StoreContextModelSnapshot : ModelSnapshot
+    [Migration("20210925064712_BasketEntityAdded")]
+    partial class BasketEntityAdded
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -57,20 +60,28 @@ namespace API.Data.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
+
                     b.Property<string>("Brand")
                         .HasColumnType("TEXT");
+
                     b.Property<string>("Description")
                         .HasColumnType("TEXT");
+
                     b.Property<string>("Name")
                         .HasColumnType("TEXT");
+
                     b.Property<string>("PictureUrl")
                         .HasColumnType("TEXT");
+
                     b.Property<long>("Price")
                         .HasColumnType("INTEGER");
+
                     b.Property<int>("QuantityInStock")
                         .HasColumnType("INTEGER");
+
                     b.Property<string>("Type")
                         .HasColumnType("TEXT");
+
                     b.HasKey("Id");
 
                     b.ToTable("Products");
