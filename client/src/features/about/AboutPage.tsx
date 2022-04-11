@@ -13,7 +13,6 @@ export default function AboutPage() {
     }
 
     return (
-        
         <Container>
             <Typography gutterBottom variant='h2'>Errors for testing purposes</Typography>
             <ButtonGroup fullWidth>
@@ -37,4 +36,5 @@ export default function AboutPage() {
             } 
         </Container>
     )
-} 
+}
+    
