@@ -1,4 +1,4 @@
-export interface Product{
+export interface Product {
     id: number;
     name: string;
     description: string;
@@ -8,3 +8,12 @@ export interface Product{
     brand: string;
     quantityInStock?: number;
 }
+
+export interface ProductParams {
+    orderBy: string;
+    searchTerm?: string;
+    types: string[];
+    brands: string[];
+    pageNumber: number;
+    pageSize: number;
+} 
