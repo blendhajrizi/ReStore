@@ -2,6 +2,7 @@ using System;
 using System.Threading.Tasks;
 using API.Data;
 using API.Entities;
+using CloudinaryDotNet;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;

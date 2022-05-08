@@ -2,58 +2,40 @@
 
 namespace API.Migrations
 {
-    public partial class PostGresInitial : Migration
+    public partial class PublicIdAdded : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.AlterColumn<string>(
-                name: "PublicId",
-                table: "Products",
-                type: "TEXT",
-                nullable: true,
-                oldClrType: typeof(string),
-                oldType: "text",
-                oldNullable: true);
-
             migrationBuilder.UpdateData(
                 table: "AspNetRoles",
                 keyColumn: "Id",
                 keyValue: 1,
                 column: "ConcurrencyStamp",
-                value: "5fafab36-d222-492d-aa0d-59c6edf30250");
+                value: "0a1f9fe3-37d1-418d-b4b5-d37ada1293cc");
 
             migrationBuilder.UpdateData(
                 table: "AspNetRoles",
                 keyColumn: "Id",
                 keyValue: 2,
                 column: "ConcurrencyStamp",
-                value: "b93ed69a-0d22-4e35-b276-d5e38f83c2bf");
+                value: "8795ebb1-c4cc-40df-9a2c-c398543eb6a4");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.AlterColumn<string>(
-                name: "PublicId",
-                table: "Products",
-                type: "text",
-                nullable: true,
-                oldClrType: typeof(string),
-                oldType: "TEXT",
-                oldNullable: true);
-
             migrationBuilder.UpdateData(
                 table: "AspNetRoles",
                 keyColumn: "Id",
                 keyValue: 1,
                 column: "ConcurrencyStamp",
-                value: "b30b7df2-b1ae-45af-8788-23f582f17bfd");
+                value: "7da276d6-acf5-4f20-a62d-abc4f385da90");
 
             migrationBuilder.UpdateData(
                 table: "AspNetRoles",
                 keyColumn: "Id",
                 keyValue: 2,
                 column: "ConcurrencyStamp",
-                value: "88f79dd6-c637-460f-9189-1d20af15a623");
+                value: "8542242a-d223-4359-b365-b9711d626cd3");
         }
     }
 }
